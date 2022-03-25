@@ -1,0 +1,150 @@
+:root {
+  --color-orange: hsl(25, 97%, 53%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-grey: hsl(217, 12%, 63%);
+  --color-medium-grey: hsl(216, 12%, 54%);
+  --color-dark-blue: hsl(213, 19%, 18%);
+  --color-very-dark-blue: hsl(216, 12%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+  background-color: var(--color-very-dark-blue);
+}
+
+p {
+  font-size: 15px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.visually-hidden {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+.card {
+  background-color: var(--color-dark-blue);
+  max-width: 24em;
+  min-height: 23em;
+  border-radius: 2em;
+  padding: 2em;
+  overflow: hidden;
+}
+
+.result-card {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.card > * + * {
+  margin-top: 1rem;
+}
+
+.card-title {
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+.card-description {
+  color: var(--color-light-grey);
+}
+
+.rating-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.rating-btn {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: var(--color-light-grey);
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.rating-btn:hover {
+  background-color: var(--color-medium-grey);
+  color: var(--color-white);
+}
+
+.rating-btn.active {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+
+.submit-btn {
+  background-color: var(--color-orange);
+  width: 100%;
+  padding: 0.8em;
+  border: none;
+  border-radius: 10em;
+  display: block;
+  margin-top: 2rem;
+  color: var(--color-white);
+  text-transform: uppercase;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-orange);
+  transform: translateY(-2px);
+}
+
+.result-text {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-orange);
+  padding: 0.5em 1em;
+  border-radius: 10em;
+  display: inline-block;
+}
+
+.card-img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result-card > h2 {
+  margin-top: 2rem;
+}
