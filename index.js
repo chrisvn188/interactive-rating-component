@@ -1,16 +1,19 @@
+// get DOM elements
 const ratingBtns = document.querySelectorAll('.rating-btn');
 const submitBtn = document.querySelector('.submit-btn');
 const resultText = document.querySelector('.result-text');
 const ratingCard = document.querySelector('.rating-card');
 const resultCard = document.querySelector('.result-card');
+
 let currentRating;
 
 ratingBtns.forEach(btn =>
   btn.addEventListener('click', e => {
     // remove all active btns
     ratingBtns.forEach(btn => btn.classList.remove('active'));
-    // add active class when clicked
+    // add active class when click on btn
     e.target.classList.add('active');
+    // get data-rating attribute from html
     currentRating = e.target.dataset.rating;
   })
 );
