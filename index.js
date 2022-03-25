@@ -13,7 +13,8 @@ ratingBtns.forEach(btn =>
     ratingBtns.forEach(btn => btn.classList.remove('active'));
     // add active class when click on btn
     e.target.classList.add('active');
-    // get data-rating attribute from html
+    // get data-rating attribute value from html
+    // assign that value to currentRating
     currentRating = e.target.dataset.rating;
   })
 );
