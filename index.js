@@ -1,5 +1,3 @@
-const RATING_LIST = [1, 2, 3, 4, 5];
-
 const ratingBtns = document.querySelectorAll('.rating-btn');
 const submitBtn = document.querySelector('.submit-btn');
 const resultText = document.querySelector('.result-text');
@@ -19,8 +17,11 @@ ratingBtns.forEach(btn =>
 
 submitBtn.addEventListener('click', () => {
   if (currentRating) {
+    // hide rating card
     ratingCard.classList.add('hidden');
+    // show result card
     resultCard.classList.remove('hidden');
+    // update result text
     resultText.textContent = `You selected ${currentRating} out of 5`;
   }
 });
